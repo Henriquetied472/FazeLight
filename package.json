@@ -1,0 +1,15 @@
+{
+  "name": "fazelight",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "core.js",
+  "scripts": {
+    "start": "node core.js"
+  },
+  "author": "Henriquetied",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0",
+    "readline-sync": "^1.4.10"
+  }
+}

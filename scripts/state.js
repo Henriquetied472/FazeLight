@@ -1,5 +1,5 @@
 const fs = require('fs')
-const playerJSON = '.Saves/save.json'
+const playerJSON = './saves/player.json'
 let playerResetData = {
 
     name: "",
@@ -13,12 +13,12 @@ module.exports.save = (print, playerDATA) => {
 
     const contentString = JSON.stringify(playerDATA)
     fs.writeFileSync(playerJSON, contentString)
-    print('\x1b[0mO jogo foi salvo')
+    print('O jogo foi salvo')
     return contentString
 
 },
 
-module.exports.load = (print) => {
+module.exports.load = () => {
 
     const fileBuffer = fs.readFileSync(playerJSON, 'utf-8')
     const contentJson = JSON.parse(fileBuffer)
@@ -30,7 +30,7 @@ module.exports.eraseSave = (print) => {
 
     const contentString = JSON.stringify(playerResetData)
     fs.writeFileSync(playerJSON, contentString)
-    print('\x1b[0mO save foi resetado')
+    print('O save foi resetado')
     return contentString
 
 }

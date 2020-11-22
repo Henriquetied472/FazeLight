@@ -3,12 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "bin": "core.js",
+  "pkg": {
+    "targets": [
+      "node12-win-x64"
+    ]
+  },
   "scripts": {
     "start": "node core.js"
   },
   "author": "Henriquetied",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "prompt-sync": "^4.2.0",
     "readline-sync": "^1.4.10"
   }
